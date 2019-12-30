@@ -1,0 +1,42 @@
+.piano-container {
+  height: 138px;
+  width: 560px;
+  display: block;
+  position: relative;
+  margin: 10px;
+}
+
+.piano-key {
+  position: absolute;
+  border-radius: 2px;
+  transition: background-color 0.3s ease-out;
+  filter: drop-shadow(0 3px 2px #0000002c);
+  cursor: pointer;
+}
+  
+.ivory-key {
+  display: block;
+  height: 100%;
+  width: calc((100% / 14) - 3px);
+  background-color: #fff;
+  z-index: 0; 
+}
+
+.ivory-key:hover {
+  background-color: #ddd;
+}
+
+.ebony-key {
+  height: 60%;
+  width: 5%;
+  background-color: #242424;
+  z-index: 1;
+}
+
+.ebony-key:hover {
+  background-color: #666;
+}
+
+.piano-key.key-selected, .piano-key:active {
+  background-color: orange;
+}
